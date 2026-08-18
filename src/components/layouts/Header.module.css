@@ -3,9 +3,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.5rem;
-  background: #1f2937;
-  color: #fff;
+  padding: 1rem 20rem;
+  background: #FFFFFF;
+  border-bottom: 0.2rem solid #DDD6FE;
+  color: #272236;
 }
 
 .header-title {
@@ -20,7 +21,7 @@
 }
 
 .header-link {
-  color: #fff;
+  color: #6F687A;
   text-decoration: none;
   font-weight: 600;
 }

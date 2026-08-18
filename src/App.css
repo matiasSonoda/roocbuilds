@@ -74,9 +74,9 @@ body {
 
 .site-footer {
   padding: 1rem 1.25rem;
-  border-top: 1px solid #000;
-  background: #111827;
-  color: #fff;
+  border-top: 0.2rem solid #DDD6FE;
+  background: #FFFFFF;
+  color: #6F687Aff;
   text-align: center;
   width: 100%;
 }

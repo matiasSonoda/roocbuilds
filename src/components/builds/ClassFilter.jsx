@@ -1,3 +1,5 @@
+import styles from './ClassFilter.module.css';
+
 export function ClassFilter({ 
   selectedClass, 
   onClassChange, 
@@ -5,23 +7,15 @@ export function ClassFilter({
   onTypeChange 
 }) {
   return (
-    <section 
-      style={{ 
-        display: 'flex', 
-        gap: '20px', 
-        padding: '15px', 
-        backgroundColor: '#140d0d', 
-        borderRadius: '8px',
-        marginBottom: '20px'
-      }}
-    >
+    <section className={styles.filterContainer}>
       {/* Filtro por Clase */}
-      <div>
-        <label htmlFor="jobClassFilter" style={{ fontWeight: 'bold', marginRight: '10px' }}>Clase:</label>
+      <div className={styles.optionJobClass}>
+        <label htmlFor="jobClassFilter" className={styles.label}>Clase:</label>
         <select 
           id="jobClassFilter"
           value={selectedClass} 
           onChange={(e) => onClassChange(e.target.value)}
+          className={styles.select}
         >
           <option value="all">Todas las Clases</option>
           <option value="knight">Knight</option>
@@ -34,12 +28,13 @@ export function ClassFilter({
       </div>
 
       {/* Filtro por Tipo de Juego */}
-      <div>
-        <label htmlFor="typeFilter" style={{ fontWeight: 'bold', marginRight: '10px' }}>Tipo:</label>
+      <div className={styles.optionBuildType}>
+        <label htmlFor="typeFilter" className={styles.label}>Tipo:</label>
         <select 
           id="typeFilter"
           value={selectedType} 
           onChange={(e) => onTypeChange(e.target.value)}
+          className={styles.select}
         >
           <option value="all">PvE y PvP</option>
           <option value="pve">PvE (Monstruos/MVP)</option>

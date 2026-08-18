@@ -1,0 +1,31 @@
+.filterContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #D8D0E5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.optionJobClass,
+.optionBuildType {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    color: #6F687A;
+    font-weight: 600;
+}
+
+.select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #E7E1EF;
+    background-color: #FFFFFF;
+    color: #272236;
+}
