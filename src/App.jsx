@@ -8,7 +8,7 @@ import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <>
+    <div className='app-shell'>
       <Header />
       <main className='content-wrapper'>
         <Routes>
@@ -18,7 +18,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

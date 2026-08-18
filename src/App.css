@@ -48,6 +48,35 @@ h1, h2, h3, h4 {
 }
 
 /* 7. Crear un Stacking Context raíz para React */
+html, body, #root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
 #root {
   isolation: isolate;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.content-wrapper {
+  width: 100%;
+}
+
+.site-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #000;
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  width: 100%;
 }

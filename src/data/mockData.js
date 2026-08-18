@@ -40,5 +40,85 @@ export const MOCK_BUILDS = [
     votes: 189,
     createdAt: '2026-08-06',
     description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '4',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '5',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '6',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '7',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '8',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '9',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '10',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
+  },
+  {
+    id: '11',
+    title: 'Sniper Trapper Híbrido',
+    author: 'ArrowInTheKnee',
+    jobClass: 'hunter',
+    buildType: 'pve', // Agregamos esto
+    votes: 189,
+    createdAt: '2026-08-06',
+    description: 'Trampas infinitas para subir de nivel solo y barato.',
   }
 ];
