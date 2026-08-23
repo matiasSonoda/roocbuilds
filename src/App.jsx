@@ -1,10 +1,10 @@
-import { Header } from './components/layouts/Header'
-import { Footer } from './components/layouts/Footer'
-import './App.css'
-import { Home } from './pages/Home'
-import { CreateBuild } from './pages/CreateBuild'
-import { BuildDetail } from './pages/BuildDetail'
-import { Routes, Route } from 'react-router-dom'
+import { Header } from './components/layouts/Header';
+import { Footer } from './components/layouts/Footer';
+import './App.css';
+import { Home } from './pages/Home';
+import { CreateBuild } from './pages/CreateBuild';
+import { BuildDetail } from './pages/BuildDetail';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

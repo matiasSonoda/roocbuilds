@@ -29,3 +29,30 @@
 .header-link:hover {
   text-decoration: underline;
 }
+
+/* =========================================
+   DISEÑO RESPONSIVE PARA EL HEADER (CELULARES)
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* 1. Quitamos los 20rem de padding y centramos todo */
+  .header-container {
+    padding: 1rem 1.5rem; /* Padding mucho más chico */
+    flex-direction: column; /* Apila el título arriba y los links abajo */
+    justify-content: center;
+    gap: 0.75rem; /* Espacio entre el título y el menú */
+  }
+
+  /* 2. Centramos el título */
+  .header-title {
+    text-align: center;
+    font-size: 1.25rem; /* Un poco más chico para móviles */
+  }
+
+  /* 3. Centramos los links de navegación */
+  .header-nav {
+    justify-content: center;
+    flex-wrap: wrap; /* Por si agregás muchos enlaces, que bajen de renglón */
+    width: 100%;
+  }
+}

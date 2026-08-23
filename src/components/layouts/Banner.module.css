@@ -46,25 +46,30 @@
     margin-top: 0.25rem;
 }
 
+/* --- AQUÍ ESTÁ EL CAMBIO DE LOS BOTONES --- */
 .nav-a {
-    color: #7C3AED;
-    width: 11.2rem;
-    height: 2.3125rem;
     display: flex;
-    padding: 0.625rem 1.25rem;
-    background-color: #FFFFFF;
-    border: 1.5px solid #D8D0E5;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem; /* El tamaño lo da este espacio interno */
+    white-space: nowrap;        /* Mantiene el texto en una sola línea */
+    color: #7C3AED;
+    background-color: #FFFFFF;
+    border: 1.5px solid #D8D0E5;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem;
     border-radius: 0.5rem;
-
+    transition: all 0.2s ease;
 }
 
 .nav-a:hover {
-    text-decoration: underline;
+    background-color: #f3e8ff;
+    border-color: #7C3AED;
+    color: #6d28d9;
 }
+/* ----------------------------------------- */
 
 .banner-ad {
     flex: 0 0 40%;
@@ -72,4 +77,56 @@
     min-height: 17rem;
     border-radius: 0 1rem 1rem 0;
     background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+/* --- ESTILO CUANDO EL BOTÓN ESTÁ CLICKEADO (ACTIVO) --- */
+.active {
+    background-color: #7C3AED; /* Violeta fuerte */
+    color: #FFFFFF;            /* Texto blanco */
+    border-color: #7C3AED;
+}
+
+.active:hover {
+    background-color: #6d28d9; /* Violeta un poco más oscuro al pasar el mouse */
+    color: #FFFFFF;
+}
+
+/* =========================================
+   MEDIA QUERIES (DISEÑO PARA CELULARES)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column;
+        height: auto; /* ESTO EVITA QUE SE CORTE POR LA MITAD */
+        min-height: 25rem; 
+    }
+
+    .banner-info {
+        flex: 1 1 100%;
+        padding: 1.5rem;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .banner-title {
+        font-size: 1.8rem; /* Un poco más chico para que no desborde */
+    }
+
+    .banner-nav {
+        justify-content: center;
+        width: 100%;
+        gap: 0.5rem; /* Menos espacio entre botones */
+    }
+
+    .nav-a {
+        width: 100%; /* Botones de ancho completo en celular para que no se corten */
+    }
+
+    .banner-ad {
+        flex: 0 0 100%;
+        width: 100%;
+        min-height: 8rem; /* Un poco más alto para que se vea el anuncio */
+        border-radius: 0 0 1rem 1rem;
+    }
 }

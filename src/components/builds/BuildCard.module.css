@@ -71,14 +71,94 @@
   margin-top: auto;
 }
 
-.cardVotes {
-  font-size: 0.75rem;
-  color: #1f2937;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+.card-image-container {
+    width: 100%;
+    height: 160px; /* Altura fija para que todas las imágenes sean iguales */
+    background-color: #f3f0f7;
+    overflow: hidden;
 }
 
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se estire o deforme */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto opcional: un leve zoom al pasar el mouse por la tarjeta */
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+/* Contenedor que agrupa las flechas y el número */
+.voteContainer {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6; /* Fondo gris claro general */
+  border-radius: 20px;       /* Forma de pastillita */
+  padding: 0.1rem;
+}
+
+/* Estilo base para AMBAS flechas */
+.voteButton {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+
+.voteButton:hover {
+  background-color: #e5e7eb;
+}
+
+/* Estado activo: Flecha Arriba (Verde) */
+.upvoted {
+  color: #16a34a; /* Verde fuerte */
+  background-color: #dcfce7; /* Fondo verde clarito */
+}
+
+.upvoted:hover {
+  background-color: #bbf7d0;
+}
+
+/* Estado activo: Flecha Abajo (Rojo) */
+.downvoted {
+  color: #dc2626; /* Rojo fuerte */
+  background-color: #fee2e2; /* Fondo rojo clarito */
+}
+
+.downvoted:hover {
+  background-color: #fecaca;
+}
+
+/* El número del medio (cambia de color según el voto) */
+.countNeutral {
+  color: #4b5563;
+  font-weight: 600;
+  min-width: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.countUp {
+  color: #16a34a;
+  font-weight: bold;
+  min-width: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.countDown {
+  color: #dc2626;
+  font-weight: bold;
+  min-width: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
 .cardLink {
   color: #2563eb;
   text-decoration: none;

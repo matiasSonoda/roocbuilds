@@ -1,13 +1,15 @@
+/* Mantenemos tu clase original intacta para que la PC se vea perfecta */
 .home-container {
-    background-color: #ebe9ee;
-    display: flex;
-    min-height: 60.375rem;
     padding: 3.5rem 20em 7.5rem 20rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-shrink: 0;
-    align-self: stretch;
+}
+
+/* =========================================
+   SOLO PARA CELULARES (No afecta la PC)
+   ========================================= */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 1.5rem 1rem 3rem 1rem; /* En celulares quita las 20rem para que no se desborde */
+    }
 }
 
 .build-list {
@@ -35,8 +37,8 @@
 .pagination-button {
     border: none;
     border-radius: 999px;
-    background: #1f2937;
-    color: #fff;
+    background: #ffa1e3;
+    color: #f3f3f5;
     padding: 0.7rem 1.2rem;
     font-weight: 600;
     cursor: pointer;

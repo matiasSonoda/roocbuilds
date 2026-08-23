@@ -1,3 +1,12 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Corta cualquier elemento que quiera salirse por los costados */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 /* =========================================
    Modern CSS Reset para React / Vite
    ========================================= */
@@ -55,6 +64,10 @@ html, body, #root {
 
 body {
   min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Cambia <weight> por un número (ej. 400 para normal, 700 para negrita) */
+  font-style: normal;
 }
 
 #root {
