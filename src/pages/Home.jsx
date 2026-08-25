@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
-import { MOCK_BUILDS } from '../data/mockData';
 import { BuildCard } from '../components/builds/BuildCard';
 import { ClassFilter } from '../components/builds/ClassFilter';
 import { Banner } from '../components/layouts/banner';
 import styles from './Home.module.css';
+import { getHome } from '../api/buildApi.js';
 
 export function Home() {
+  const [build, setBuild] = useState([]);
   const [selectedClass, setSelectedClass] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
-  const filteredBuilds = MOCK_BUILDS.filter((build) => {
+  const filteredBuilds = build.filter((build) => {
     const matchClass = selectedClass === 'all' || build.jobClass === selectedClass;
     const matchType = selectedType === 'all' || build.buildType === selectedType;
     return matchClass && matchType;
@@ -33,6 +34,13 @@ export function Home() {
       setCurrentPage(totalPages);
     }
   }, [currentPage, totalPages]);
+
+  useEffect(() => {
+    getHome().then((data) => {
+      setBuild(data);
+    });
+  },[])
+
 
   return (
     <main className={styles['home-container']}>

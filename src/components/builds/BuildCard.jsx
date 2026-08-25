@@ -4,7 +4,7 @@ import styles from './BuildCard.module.css';
 const formatTag = (value) => {
   if (!value) return '';
   return `#${value
-    .replace(/-/g, ' ')
+    .replace(/_/g, ' ')
     .replace(/\b\w/g, (char) => char.toUpperCase())}`;
 };
 
