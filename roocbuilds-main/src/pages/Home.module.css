@@ -1,0 +1,61 @@
+.home-container {
+    background-color: #ebe9ee;
+    display: flex;
+    min-height: 60.375rem;
+    padding: 3.5rem 2em 7.5rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex-shrink: 0;
+    align-self: center;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.build-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.empty-state {
+    color: red;
+    font-weight: bold;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.pagination-button {
+    border: none;
+    border-radius: 999px;
+    background: #1f2937;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    color: #374151;
+    font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+

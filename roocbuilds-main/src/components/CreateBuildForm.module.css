@@ -1,0 +1,202 @@
+.formContainer {
+	width: min(100%, 1015px);
+	margin: 0 auto;
+	padding: 2rem;
+	display: grid;
+	gap: 1.25rem;
+	background: #FFFFFF;
+	border: 1px solid #393044;
+	border-radius: 12px;
+	color: #272236;
+	font-family: 'Outfit', sans-serif;
+	font-weight: 600;
+}
+/* Contenedores generales e Inter para los textos base */
+.filterContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #D8D0E5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+	font-weight: 600;
+}
+/* Etiquetas y campos de texto del formulario */
+label, input, textarea, select {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.formGroup {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.formRow {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.label {
+	color: #272236;
+	font-weight: 600;
+}
+
+.input,
+.select,
+.menuSelect {
+	min-height: 2.5rem;
+	padding: 0.5rem 0.75rem;
+	border: 1px solid #5b4d6b;
+	border-radius: 6px;
+	background: #FFFFFF;
+	color: #272236;
+}
+
+.select:focus,
+.menuSelect:focus {
+	outline: none;
+	background: #7C3AED;
+	color: #FFF;
+}
+
+.select option,
+.menuSelect option {
+	background: #FFF;
+	color: #272236;
+}
+
+
+.errorText {
+	color: #272236;
+	font-size: 0.875rem;
+}
+
+.menuBarContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	padding: 0.75rem;
+	border: 1px solid #393044;
+	border-bottom: 0;
+	border-radius: 8px 8px 0 0;
+	background: #F7F5FA;
+}
+
+.menuGroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	align-items: center;
+}
+
+.menuButton {
+	min-height: 2.25rem;
+	padding: 0.4rem 0.7rem;
+	border: 1px solid #393044;
+	border-radius: 5px;
+	background: #F7F5FA;
+	color: #272236;
+	cursor: pointer;
+}
+
+.menuButton:hover {
+	background: #7C3AED;
+	color: #FFF;
+}
+
+.submitButton:hover {
+	background: #fff;
+    color: #223628;
+}
+
+.hiddenInput {
+	display: none;
+}
+
+.editorWrapper {
+	min-height: 18rem;
+	padding: 1rem;
+	border: 1px solid #393044;
+	border-radius: 0 0 8px 8px;
+	background: #fff;
+	color: #223628;
+}
+
+.editorArea {
+	min-height: 16rem;
+}
+
+.editorArea :global(.ProseMirror) {
+	min-height: 16rem;
+	outline: none;
+}
+
+.editorArea :global(.ProseMirror ul),
+.editorArea :global(.ProseMirror ol) {
+	margin: 0.75rem 0;
+	padding-inline-start: 1.5rem;
+}
+
+.editorArea :global(.ProseMirror li) {
+	padding-inline-start: 0.35rem;
+}
+
+.editorArea :global(.ProseMirror li > p) {
+	display: inline;
+	margin: 0;
+}
+
+.editorArea :global(.ProseMirror li:has(> p[style*="text-align: center"])),
+.editorArea :global(.ProseMirror li:has(> p[style*="text-align: right"])),
+.editorArea :global(.ProseMirror li:has(> p[style*="text-align: justify"])) {
+	list-style-position: inside;
+	padding-inline-start: 0;
+}
+
+.editorArea :global(.ProseMirror li:has(> p[style*="text-align: center"])) {
+	text-align: center;
+}
+
+.editorArea :global(.ProseMirror li:has(> p[style*="text-align: right"])) {
+	text-align: right;
+}
+
+.editorArea :global(.ProseMirror li:has(> p[style*="text-align: justify"])) {
+	text-align: justify;
+}
+
+.submitButton {
+	min-height: 2.75rem;
+	padding: 0.6rem 1rem;
+	border: 1px solid #7C3AED;
+	border-radius: 6px;
+	background: #7C3AED;
+	color: #FFFFFF;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+@media (max-width: 640px) {
+	.formContainer {
+		padding: 1rem;
+		border-radius: 0;
+	}
+
+	.formRow {
+		grid-template-columns: 1fr;
+	}
+
+	.menuBarContainer {
+		align-items: stretch;
+	}
+
+	.menuGroup {
+		width: 100%;
+	}
+}

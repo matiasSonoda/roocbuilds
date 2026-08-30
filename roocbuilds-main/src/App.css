@@ -1,0 +1,102 @@
+/* =========================================
+  Modern CSS Reset para React / Vite
+   ========================================= */
+
+/* 1. Un modelo de caja predecible */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Eliminar márgenes por defecto de forma global */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Tipografía consistente en controles de formulario */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 4. Comportamiento base del documento */
+html {
+  /* Habilita el cambio de esquema de color nativo del SO */
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh; /* Soporte moderno para móviles */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5. Comportamiento responsivo para elementos multimedia */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Evitar desbordamiento de texto y mejorar lectura */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  text-wrap: pretty; /* CSS Moderno: balancea líneas huérfanas */
+}
+h1, h2, h3, h4 {
+  text-wrap: balance; /* CSS Moderno: simetría visual en títulos */
+}
+
+/* 7. Crear un Stacking Context raíz para React */
+html, body, #root {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh; /* Soporte moderno para móviles */
+  overflow-x: hidden; /* Único agregado para evitar el scroll lateral */
+  background-color: #ebe9ee;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  isolation: isolate;
+  min-height: 100vh;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  color: #8a8494;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.tiptap:focus p.is-editor-empty:first-child::before {
+  content: '';
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.content-wrapper {
+  width: 100%;
+  background: #ebe9ee;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.site-footer {
+  padding: 1rem 1.25rem;
+  border-top: 0.2rem solid #DDD6FE;
+  background: #FFFFFF;
+  color: #6F687Aff;
+  text-align: center;
+  width: 100%;
+}

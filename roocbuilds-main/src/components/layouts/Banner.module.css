@@ -1,0 +1,118 @@
+.banner-container {
+    display: flex;
+    align-items: stretch;
+    gap: 1.25rem;
+    width: 100%;
+    min-height: 300px;
+    padding: 1.5rem;
+    border: 1.1px solid #D8D0E5;
+    background: #FFF;
+    color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.banner-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 60%;
+    min-width: 0;
+    padding: 2.25rem 2rem 2.25rem 2.25rem;
+    gap: 1.25rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.banner-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Opcional: hace que el texto vaya en mayúsculas */
+    letter-spacing: 0.05em;     /* Espaciado sutil entre letras */
+    color: #7C3AED;            /* Color violeta acorde a tus botones */
+    background-color: #F3E8FF; /* Un fondito violeta muy suave (opcional) */
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;      /* Lo hace con bordes redondeados tipo "badge" */
+    display: inline-block;
+}
+.banner-title {
+    margin: 0;
+    color: #272236;
+    /* font-size: 2.5rem; */
+    font-size: clamp(1.8rem, 3vw, 2.5rem); /* Ajuste de tamaño de fuente con clamp */
+    line-height: 1.1;
+    font-family: 'Outfit', sans-serif; /* Aca ponemos Outfit al titulo */
+    font-weight: 900;
+}
+
+.banner-title-accent {
+    color: #A78BFA; /* Un violeta pastel*/
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900; /* Puedes mantener el mismo grosor o variarlo */
+}
+
+.banner-description {
+    margin: 0;
+    font-size: 1rem;
+    color: #6F687A;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif; /* Aca ponemos Inter al cuerpo del texto */
+}
+
+.banner-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+.nav-a {
+    color: #7c3aed;
+    width: 200px;/* cambio por un ancho minimo y maximo flexible */
+    height: 2.3125rem;
+    display: flex; 
+    padding: 0.625rem 1.25rem;
+    background-color: #FFFFFF;
+    border: 1.5px solid #7c3aed; /* Aca se cambia al color violeta */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    font-family: 'Inter', sans-serif; /* Aca ponemos Inter al cuerpo del texto */
+    text-align: center; /* Esto es para que el texto se centre si salta de linea */
+    transition: background-color 0.3s, color 0.3s, text-decoration 0.3s; /* Transiciones suaves al cliquear el otro botón */
+}
+
+.nav-a:hover {
+    background-color: #7c3aed; /* Aca se cambia al color violeta */
+    color: #FFFFFF; /* Aca se cambia al color blanco */
+    text-decoration: none;/* Aca quitamos el subrayado */
+}
+.nav-a:active {
+    transform: scale(0.98); /* Efecto de "hundimiento" al presionar el botón */
+}
+.banner-ad {
+    flex: 0 0 40%;
+    min-height: 300px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+/* --- ADAPTABILIDAD PARA CELULARES (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column; /* Apila el texto y la imagen en columna */
+        min-height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    /* Si tienes clases internas para los textos o la imagen del banner, ajústalas aquí */
+    .banner-ad {
+        width: 100%;
+        height: 200px; /* Le damos una altura fija controlada en celular */
+    }
+    }
