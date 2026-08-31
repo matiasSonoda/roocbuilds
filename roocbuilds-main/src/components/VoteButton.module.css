@@ -1,0 +1,48 @@
+.voteButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  border: 1.5px solid #D8D0E5;
+  color: #6F687A;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px; /* Estilo píldora */
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.voteButton:hover {
+  border-color: #10B981; /* Borde verde suave al pasar el mouse */
+  color: #10B981;
+  background-color: #ECFDF5;
+}
+
+/* Estado activo: cuando el usuario ya votó (color verde) */
+.voteButton.voted {
+  background-color: #10B981; /* Verde esmeralda */
+  border-color: #10B981;
+  color: #FFFFFF;
+}
+
+.voteButton.voted:hover {
+  background-color: #059669; /* Verde un poco más oscuro para el hover */
+  border-color: #059669;
+}
+
+.voteIcon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.voteButton:active .voteIcon {
+  transform: scale(1.2); /* Pequeño rebote al hacer clic */
+}
+
+.voteCount {
+  font-variant-numeric: tabular-nums;
+}

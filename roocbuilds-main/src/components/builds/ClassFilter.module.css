@@ -1,0 +1,133 @@
+.filterContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #D8D0E5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Contenedor relativo para posicionar el menú flotante debajo */
+.dropdownWrapper {
+    position: relative;
+    display: inline-block;
+    min-width: 220px;
+}
+
+/* El botón principal que muestra "Clase" arriba y el valor abajo */
+.dropdownButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #D8D0E5;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dropdownButton:hover {
+    border-color: #7C3AED;
+    background-color: #FAFAFC;
+}
+
+/* Contenedor de los dos textos internos */
+.buttonTextContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* El mini texto de arriba ("Clase" / "Tipo") */
+.buttonCategory {
+    font-size: 0.75rem;
+    color: #6F687A;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* El texto de abajo con la selección actual */
+.buttonValue {
+    font-size: 0.95rem;
+    color: #272236;
+    font-weight: 600;
+}
+
+/* Flechita con animación */
+.arrow {
+    font-size: 0.75rem;
+    color: #6F687A;
+    transition: transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.arrowOpen {
+    transform: rotate(180deg);
+}
+
+/* Menú flotante que se despliega al hacer clic */
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    min-width: 240px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #D8D0E5;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(39, 34, 54, 0.08);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+/* Opciones de la lista desplegable */
+.dropdownItem {
+    padding: 10px 12px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    color: #272236;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdownItem:hover {
+    background-color: #F3E8FF;
+    color: #7C3AED;
+}
+
+/* Opción activa/seleccionada */
+.activeItem {
+    background-color: #F3E8FF;
+    color: #7C3AED;
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .filterContainer {
+        flex-direction: column; /* Los filtros se ponen uno debajo del otro */
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .dropdownWrapper {
+        width: 100%; /* Cada botón de filtro ocupa todo el ancho de la pantalla */
+        min-width: 100%;
+    }
+}

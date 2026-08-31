@@ -1,0 +1,18 @@
+.sideAdContainer {
+    width: 160px;
+  height: 600px; /* Tamaño estándar de banner vertical tipo Skyscraper */
+    background-color: #F3F0F6;
+    border: 1px dashed #D8D0E5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.adText {
+    color: #8A8494;
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
