@@ -1,0 +1,81 @@
+.articleWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap:1.5rem;
+    padding: 2rem 1rem 4rem 1rem;
+    box-sizing: border-box;
+}
+
+.headerWrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border: 1px solid #D8D0E5;
+}
+
+.headerMetaData{
+    display: flex;
+    flex-direction: column;
+}
+
+.metaRow{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    margin-top: 0.75rem;
+}
+
+.tiptapContent{
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border: 1px solid #D8D0E5;
+}
+
+.tiptapContent ul,
+.tiptapContent ol {
+    padding-left: 40px;
+    margin-bottom: 1rem;
+}
+
+.tiptapContent li {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px){
+    .articleWrapper {
+        gap:2rem;
+        padding: 3.5rem 2rem 7.5rem 2rem;
+    }
+
+    .headerWrapper{
+        padding:2.5rem;
+        border-radius: 8px;
+    }
+
+    .metaRow{
+        flex-direction: row;
+        align-items: center;
+        gap:0.7rem;
+    }
+
+    .tiptapContent {
+        padding: 2.5rem;
+        border-radius: 8px;
+    }
+
+    .tiptapContent ul,
+    .tiptapContent ol {
+        padding-left: 2rem;
+    }
+}

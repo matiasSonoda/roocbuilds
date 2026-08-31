@@ -18,11 +18,6 @@ input, button, textarea, select {
   font: inherit;
 }
 
-/* 4. Comportamiento base del documento */
-html {
-  /* Habilita el cambio de esquema de color nativo del SO */
-  color-scheme: dark light;
-}
 
 body {
   min-height: 100vh;

@@ -73,17 +73,21 @@
 
 .cardVotes {
   font-size: 0.75rem;
-  color: #1f2937;
+  color: #371f26;
   font-weight: 800;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
 .cardLink {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.8rem;
+  border: 0;
+  background-color: #ffffff;
+  color: #7C3AED;
+  font-family: Inter;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .cardLink:hover {

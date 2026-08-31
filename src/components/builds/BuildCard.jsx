@@ -26,8 +26,8 @@ export function BuildCard({ build }) {
 
       <div className={styles.cardFooter}>
         <span className={styles.cardVotes}>▲ {build.votes} Votos</span>
-        <Link className={styles.cardLink} to={`/build/${build.id}`}>
-          Ver guía completa →
+        <Link to={`build/${build.id}`} className={styles.cardLink}>
+          See the complete Guide →
         </Link>
       </div>
     </article>
