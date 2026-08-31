@@ -7,10 +7,7 @@ export function VoteButton({ initialVotes = 0, onVoteChange }) {
 
     const handleVoteClick = () => {
     if (hasVoted) {
-      // Si ya había votado, quita el voto y vuelve al estado original
-        setVotes(prev => prev - 1);
-        setHasVoted(false);
-        if (onVoteChange) onVoteChange(false);
+        
     } else {
       // Si no había votado, suma el voto y se activa
         setVotes(prev => prev + 1);

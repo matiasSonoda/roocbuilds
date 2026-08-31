@@ -16,9 +16,12 @@
 
 .header-title {
   margin: 0;
-  font-size: 1.35rem;
-  font-family: 'Outfit', sans-serif;/* Tipografia Outfit para el titulo principal */
-  font-weight: 700;
+  color: #272236;
+  font-family:'Outfit', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
   white-space: nowrap; /* Evita que el título se rompa en varias líneas */
 }
 

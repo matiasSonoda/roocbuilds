@@ -2,7 +2,7 @@
     background-color: #ebe9ee;
     display: flex;
     min-height: 60.375rem;
-    padding: 3.5rem 2em 7.5rem 2rem;
+    padding: 2rem 1.5rem 3rem 1.5rem;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -44,7 +44,9 @@
     color: #fff;
     padding: 0.7rem 1.2rem;
     font-weight: 600;
+    font-size: 0.9rem;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .pagination-button:disabled {
@@ -57,5 +59,12 @@
     font-weight: 600;
 }
 
+.home-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900; /* Grosor máximo para que quede bien pesado */
+    font-size: 2.2rem;   /* O el tamaño que prefieras */
+    color: #272236;
+    margin: 0 0 1.5rem 0;
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
 

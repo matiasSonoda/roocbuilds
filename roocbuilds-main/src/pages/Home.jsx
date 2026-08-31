@@ -4,6 +4,8 @@ import { ClassFilter } from '../components/builds/ClassFilter';
 import { Banner } from '../components/layouts/banner';
 import styles from './Home.module.css';
 import { getHome } from '../api/buildApi.js';
+import {MOCK_BUILDS } from '../data/mockData.js';
+
 /* arriba se encuentran las importaciones con los Hooks escenciales de React para manejar el estado local y los efectos secundarios, tambien componentes visuales,los filtros y los estilos y API para cargar los estilos de modulos CSS */
 
 export function Home() {
@@ -14,7 +16,7 @@ export function Home() {
   const itemsPerPage = 6;
 /* Estados del Componente: Almacena el arreglo de builds desde la API, guarda los criterios filtrados seleccionados por el usuario (selected) y controla la paginacion de la tabla/lista (currentPage o itemsPerPage) */
 
-  const filteredBuilds = build.filter((build) => {
+  const filteredBuilds = MOCK_BUILDS.filter((build) => {
     const matchClass = selectedClass === 'all' || build.jobClass === selectedClass;
     const matchType = selectedType === 'all' || build.buildType === selectedType;
     return matchClass && matchType;
