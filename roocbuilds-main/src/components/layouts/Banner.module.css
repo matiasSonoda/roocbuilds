@@ -93,6 +93,8 @@
 }
 .nav-a:active {
     transform: scale(0.98); /* Efecto de "hundimiento" al presionar el botón */
+    background-color: #7c3aed !important; /* Fuerza el fondo violeta al tocar con el dedo */
+    color: #FFFFFF !important;             /* Fuerza el texto blanco al tocar */
 }
 .banner-ad {
     flex: 0 0 40%;

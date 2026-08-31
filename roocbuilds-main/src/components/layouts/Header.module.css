@@ -85,7 +85,10 @@
   }
 
   .header-link {
-    font-size: 0.85rem;    /* Tipografía sutil para los enlaces */
-    padding: 0.1rem 0.2rem; 
+    font-size: 0.85rem;    
+    padding: 0.3rem 0.6rem;      /* Un poco más de padding para que parezca una pastilla */
+    background-color: #F8F5FF;   /* Fondo violeta muy suave */
+    border: 1px solid #E7E1EF;   /* Borde sutil */
+    border-radius: 6px;          /* Bordes redondeados */
   }
-}
+  }
