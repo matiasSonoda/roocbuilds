@@ -1,0 +1,75 @@
+.banner-container {
+    display: flex;
+    align-items: stretch;
+    gap: 1.25rem;
+    height: 17rem;
+    width: 100%;
+    padding: 0rem;
+    border: 1.1px solid #D8D0E5;
+    background: #FFF;
+    color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.banner-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 60%;
+    min-width: 0;
+    padding: 2.25rem 2rem 2.25rem 2.25rem;
+    gap: 1.25rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.banner-title {
+    margin: 0;
+    color: #272236;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.banner-description {
+    margin: 0;
+    font-size: 1rem;
+    color: #6F687A;
+    line-height: 1.5;
+}
+
+.banner-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+.nav-a {
+    color: #7C3AED;
+    width: 11.2rem;
+    height: 2.3125rem;
+    display: flex;
+    padding: 0.625rem 1.25rem;
+    background-color: #FFFFFF;
+    border: 1.5px solid #D8D0E5;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+
+}
+
+.nav-a:hover {
+    text-decoration: underline;
+}
+
+.banner-ad {
+    flex: 0 0 40%;
+    height: 100%;
+    min-height: 17rem;
+    border-radius: 0 1rem 1rem 0;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+}

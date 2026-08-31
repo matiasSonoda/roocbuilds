@@ -1,0 +1,27 @@
+.createBuildPage {
+  width: min(100%, 1015px);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.createBuildPage > h2,
+.createBuildPage > p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.createBuildPage > h2 {
+    color: #272236;
+  margin-bottom: 0.5rem;
+}
+
+.createBuildPage > p {
+    color: #6F687A;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .createBuildPage {
+    padding: 1rem 0;
+  }
+}

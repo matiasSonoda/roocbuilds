@@ -1,0 +1,31 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 20rem;
+  background: #FFFFFF;
+  border-bottom: 0.2rem solid #DDD6FE;
+  color: #272236;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-link {
+  color: #6F687A;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-link:hover {
+  text-decoration: underline;
+}
