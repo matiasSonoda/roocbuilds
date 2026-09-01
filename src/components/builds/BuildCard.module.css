@@ -73,23 +73,64 @@
 
 .cardVotes {
   font-size: 0.75rem;
-  color: #371f26;
+  color: #1f2937;
   font-weight: 800;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
+/* Botón de Votar (Estado Neutro) */
+.voteButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: #F8F7FA;
+    border: 1.5px solid #D8D0E5;
+    border-radius: 6px;
+    color: #6F687A;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.voteButton:hover {
+    background-color: #F3E8FF;
+    border-color: #7C3AED;
+    color: #7C3AED;
+}
+
+/* Botón de Votar (Estado Activo / Verde Esmeralda) */
+.votedActive {
+    background-color: #E6F4EA !important;
+    border-color: #137333 !important;
+    color: #137333 !important;
+}
+
+.votedActive:hover {
+    background-color: #CEEAD6 !important;
+}
 .cardLink {
-  border: 0;
-  background-color: #ffffff;
-  color: #7C3AED;
-  font-family: Inter;
-  font-size: 0.8125rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
 .cardLink:hover {
   text-decoration: underline;
+}
+
+.card {
+    /* ... tus estilos actuales ... */
+    flex: 1 1 calc(33.333% - 1.5rem); /* Para desktop */
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* En celular, cada tarjeta ocupa el 100% del ancho */
+        min-width: 100%;
+    }
 }

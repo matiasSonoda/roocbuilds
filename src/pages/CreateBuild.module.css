@@ -1,27 +1,32 @@
 .createBuildPage {
   width: min(100%, 1015px);
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 1.5rem;/* <--- Añadimos padding horizontal de 1.25rem (20px) */
+  box-sizing: border-box; /* <--- Evita que el padding sume ancho extra */
 }
 
 .createBuildPage > h2,
 .createBuildPage > p {
   margin-left: 0;
   margin-right: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
 }
 
 .createBuildPage > h2 {
     color: #272236;
   margin-bottom: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
 }
 
 .createBuildPage > p {
     color: #6F687A;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem; 
 }
 
 @media (max-width: 640px) {
   .createBuildPage {
-    padding: 1rem 0;
+    padding: 1rem 1rem; /* Reducimos el padding en pantallas pequeñas */
   }
 }

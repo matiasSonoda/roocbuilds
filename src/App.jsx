@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/create' element={<CreateBuild />} />
-          <Route path='build/:id' element={<BuildDetail />} />
+          <Route path='/build/:id' element={<BuildDetail />} />
         </Routes>
       </main>
       <Footer />

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
@@ -18,19 +18,38 @@ import styles from './CreateBuildForm.module.css';
 
 const MenuBar = ({ editor }) => {
   const fileInputRef = useRef(null);
+  const [isUploading, setIsUploading] = useState(false);
 
   if (!editor) return null;
 
   // Función para procesar la imagen desde la PC del usuario
-  const handleImageUpload = (e) => {
+  const handleImageUpload = async (e) => {
     const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        // Inyectamos la imagen en el editor usando Base64 (Data URI)
-        editor.chain().focus().setImage({ src: event.target.result }).run();
-      };
-      reader.readAsDataURL(file);
+    if (!file) return; 
+
+    setIsUploading(true);
+
+    try {
+      const formData = new FormData();
+      formData.append('file',file);
+
+      const response = await fetch('http://localhost:8080/api/v1/builds/upload', {
+        method: 'POST',
+        body: formData,  
+      });
+      if (!response.ok){
+        throw new Error('Error to upload the image to the server');
+      }
+
+      const data = await response.json();
+      const imageUrl = data.url;
+
+      editor.chain().focus().setImage({src: imageUrl}).run();
+    }catch(error){
+      throw new Error('Hubo un problema subiendo la imagen', error);
+    }finally{
+      setIsUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = '';
     }
   };
 
@@ -112,8 +131,13 @@ return (
           ref={fileInputRef} 
           onChange={handleImageUpload} 
         />
-        <button className={styles.menuButton} type="button" onClick={() => fileInputRef.current.click()}>
-          🖼 Upload Image
+        <button 
+          className={styles.menuButton} 
+          type="button" 
+          onClick={() => fileInputRef.current.click()}
+          disabled={isUploading} 
+        >
+          {isUploading ? '⏳ Subiendo...' : '🖼 Upload Image'}
         </button>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './BuildCard.module.css';
 
@@ -9,6 +10,16 @@ const formatTag = (value) => {
 };
 
 export function BuildCard({ build }) {
+  // Estado local para manejar el voto de tipo toggle (activar/desactivar)
+  const [hasVoted, setHasVoted] = useState(false);
+  const [votesCount, setVotesCount] = useState(build.votes);
+
+  const handleVoteClick = () => {
+    if(!hasVoted) {
+      setHasVoted(true);
+    }
+  };
+
   return (
     <article className={styles.card}>
       <div className={styles.cardTopRow}>
@@ -25,8 +36,17 @@ export function BuildCard({ build }) {
       <div className={styles.cardDivider} />
 
       <div className={styles.cardFooter}>
-        <span className={styles.cardVotes}>▲ {build.votes} Votos</span>
-        <Link to={`build/${build.id}`} className={styles.cardLink}>
+        {/* Botón de votar interactivo */}
+        <button
+          type="button"
+          onClick={handleVoteClick}
+          className={`${styles.voteButton} ${hasVoted ? styles.votedActive : ''}`}
+        >
+          <span>▲</span>
+          <span>{votesCount} Votes</span>
+        </button>
+
+        <Link className={styles.cardLink} to={`/build/${build.id}`}>
           See the complete Guide →
         </Link>
       </div>

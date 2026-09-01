@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from 'react';
 import styles from './ClassFilter.module.css';
 
 export function ClassFilter({ 
@@ -6,48 +7,121 @@ export function ClassFilter({
   selectedType, 
   onTypeChange 
 }) {
+  const [isClassOpen, setIsClassOpen] = useState(false);
+  const [isTypeOpen, setIsTypeOpen] = useState(false);
+
+  const classRef = useRef(null);
+  const typeRef = useRef(null);
+
+  // Cierra los menús si haces clic fuera de ellos
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (classRef.current && !classRef.current.contains(event.target)) {
+        setIsClassOpen(false);
+      }
+      if (typeRef.current && !typeRef.current.contains(event.target)) {
+        setIsTypeOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const classes = [
+    { value: 'all', label: 'Todas las Clases' },
+    { value: 'Lord Knight', label: 'Lord Knight' },
+    { value: 'Paladin', label: 'Paladin' },
+    { value: 'Sniper', label: 'Sniper' },
+    { value: 'Minstrel', label: 'Minstrel' },
+    { value: 'Gypsy', label: 'Gypsy' },
+    { value: 'Assasin Cross', label: 'Assasin Cross' },
+    { value: 'Stalker', label: 'Stalker' },
+    { value: 'High Priest', label: 'High Priest' },
+    { value: 'Champion', label: 'Champion' },
+    { value: 'High Wizzard', label: 'High Wizzard' },
+    { value: 'Professor', label: 'Professor' },
+    { value: 'Biochemist', label: 'Biochemist' }
+  ];
+
+  const types = [
+    { value: 'all', label: 'PvE y PvP' },
+    { value: 'PVE', label: 'PvE (MVP)' },
+    { value: 'PVP', label: 'PvP (Player vs Player)' },
+    { value: 'WOE', label: 'WOE (War of Emperium)' }
+  ];
+
+  const currentClassLabel = classes.find(c => c.value === selectedClass)?.label || 'Todas las Clases';
+  const currentTypeLabel = types.find(t => t.value === selectedType)?.label || 'PvE y PvP';
+
   return (
     <section className={styles.filterContainer}>
-      {/* Filtro por Clase */}
-      <div className={styles.optionJobClass}>
-        <label htmlFor="jobClassFilter" className={styles.label}>Clase:</label>
-        <select 
-          id="jobClassFilter"
-          value={selectedClass} 
-          onChange={(e) => onClassChange(e.target.value)}
-          className={styles.select}
+      
+      {/* BOTÓN DESPLEGABLE DE CLASE */}
+      <div className={styles.dropdownWrapper} ref={classRef}>
+        <button 
+          type="button"
+          className={styles.dropdownButton}
+          onClick={() => setIsClassOpen(!isClassOpen)}
         >
-          <option value="all">Todas las Clases</option>
-          <option value="Lord Knight">Lord Knight</option>
-          <option value="Paladin">Paladin</option>
-          <option value="Sniper">Sniper</option>
-          <option value="Minstrel">Minstrel</option>
-          <option value="Gypsy">Gypsy</option>
-          <option value="Assasin Cross">Assasin Cross</option>
-          <option value="Stalker">Stalker</option>
-          <option value="High Priest">High Priest</option>
-          <option value="Champion">Champion</option>
-          <option value="High Wizzard">High Wizzard</option>
-          <option value="Professor">Professor</option>
-          <option value="Mastersmith">Biochemist</option>
-        </select>
+          <div className={styles.buttonTextContent}>
+            <span className={styles.buttonCategory}>Clase</span>
+            <span className={styles.buttonValue}>{currentClassLabel}</span>
+          </div>
+          <span className={`${styles.arrow} ${isClassOpen ? styles.arrowOpen : ''}`}>▼</span>
+        </button>
+
+        {isClassOpen && (
+          <div className={styles.dropdownMenu}>
+            {classes.map((c) => (
+              <button
+                key={c.value}
+                type="button"
+                className={`${styles.dropdownItem} ${selectedClass === c.value ? styles.activeItem : ''}`}
+                onClick={() => {
+                  onClassChange(c.value);
+                  setIsClassOpen(false);
+                }}
+              >
+                {c.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Filtro por Tipo de Juego */}
-      <div className={styles.optionBuildType}>
-        <label htmlFor="typeFilter" className={styles.label}>Tipo:</label>
-        <select 
-          id="typeFilter"
-          value={selectedType} 
-          onChange={(e) => onTypeChange(e.target.value)}
-          className={styles.select}
+      {/* BOTÓN DESPLEGABLE DE TIPO */}
+      <div className={styles.dropdownWrapper} ref={typeRef}>
+        <button 
+          type="button"
+          className={styles.dropdownButton}
+          onClick={() => setIsTypeOpen(!isTypeOpen)}
         >
-          <option value="all">PvE y PvP</option>
-          <option value="PVE">PvE (MVP)</option>
-          <option value="PVP">PvP (Player vs Player)</option>
-          <option value="WOE">WOE (War of Emperium)</option>
-        </select>
+          <div className={styles.buttonTextContent}>
+            <span className={styles.buttonCategory}>Tipo</span>
+            <span className={styles.buttonValue}>{currentTypeLabel}</span>
+          </div>
+          <span className={`${styles.arrow} ${isTypeOpen ? styles.arrowOpen : ''}`}>▼</span>
+        </button>
+
+        {isTypeOpen && (
+          <div className={styles.dropdownMenu}>
+            {types.map((t) => (
+              <button
+                key={t.value}
+                type="button"
+                className={`${styles.dropdownItem} ${selectedType === t.value ? styles.activeItem : ''}`}
+                onClick={() => {
+                  onTypeChange(t.value);
+                  setIsTypeOpen(false);
+                }}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
+
     </section>
   );
 }

@@ -1,4 +1,4 @@
-.formContainer {
+/*.formContainer {
 	width: min(100%, 1015px);
 	margin: 0 auto;
 	padding: 2rem;
@@ -8,27 +8,6 @@
 	border: 1px solid #393044;
 	border-radius: 12px;
 	color: #272236;
-	font-family: 'Outfit', sans-serif;
-	font-weight: 600;
-}
-/* Contenedores generales e Inter para los textos base */
-.filterContainer {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    width: 100%;
-    padding: 15px;
-    background-color: #FFFFFF;
-    border: 1.5px solid #D8D0E5;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-family: 'Inter', sans-serif;
-	font-weight: 600;
-}
-/* Etiquetas y campos de texto del formulario */
-label, input, textarea, select {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
 }
 
 .formGroup {
@@ -200,3 +179,4 @@ label, input, textarea, select {
 		width: 100%;
 	}
 }
+*/
