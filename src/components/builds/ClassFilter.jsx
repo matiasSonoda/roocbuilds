@@ -50,8 +50,8 @@ export function ClassFilter({
     { value: 'WOE', label: 'WOE (War of Emperium)' }
   ];
 
-  const currentClassLabel = classes.find(c => c.value === selectedClass)?.label || 'Todas las Clases';
-  const currentTypeLabel = types.find(t => t.value === selectedType)?.label || 'PvE y PvP';
+  const currentClassLabel = classes.find(c => c.value === selectedClass)?.label || 'All Classes';
+  const currentTypeLabel = types.find(t => t.value === selectedType)?.label || 'PvE & PvP';
 
   return (
     <section className={styles.filterContainer}>
@@ -64,7 +64,7 @@ export function ClassFilter({
           onClick={() => setIsClassOpen(!isClassOpen)}
         >
           <div className={styles.buttonTextContent}>
-            <span className={styles.buttonCategory}>Clase</span>
+            <span className={styles.buttonCategory}>Job Class</span>
             <span className={styles.buttonValue}>{currentClassLabel}</span>
           </div>
           <span className={`${styles.arrow} ${isClassOpen ? styles.arrowOpen : ''}`}>▼</span>

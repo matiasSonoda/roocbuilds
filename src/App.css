@@ -94,3 +94,17 @@ body {
   text-align: center;
   width: 100%;
 }
+
+/* Selecciona directamente el contenedor interno que genera Tiptap */
+.ProseMirror {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* Evita que el foco o el borde rompa el diseño */
+.ProseMirror:focus {
+  outline: none;
+}

@@ -5,6 +5,7 @@ import { Home } from './pages/Home'
 import { CreateBuild } from './pages/CreateBuild'
 import { BuildDetail } from './pages/BuildDetail'
 import { Routes, Route } from 'react-router-dom'
+import { PATHS } from './config/routes'
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
       <Header />
       <main className='content-wrapper'>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/create' element={<CreateBuild />} />
-          <Route path='/build/:id' element={<BuildDetail />} />
+          <Route path={PATHS.HOME} element={<Home />} />
+          <Route path={PATHS.CREATE} element={<CreateBuild />} />
+          <Route path={PATHS.BUILD_DETAILS()} element={<BuildDetail />} />
         </Routes>
       </main>
       <Footer />

@@ -1,3 +1,14 @@
+.ProseMirror {
+  /* Asegura que el contenedor respete el ancho máximo de su padre */
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* Forza el salto de línea para palabras largas o texto continuo */
+  overflow-wrap: break-word;
+  word-break: break-word; /* Fallback para navegadores antiguos */
+  white-space: pre-wrap;   /* Respeta los saltos de línea e introduce saltos automáticos */
+}
+
 .formContainer {
 	width: min(100%, 1015px);
 	margin: 0 auto;
@@ -105,7 +116,8 @@ label, input, textarea, select {
 	cursor: pointer;
 }
 
-.menuButton:hover {
+.menuButton:hover,
+.menuButton:global(.active) {
 	background: #7C3AED;
 	color: #FFF;
 }
