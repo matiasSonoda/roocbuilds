@@ -9,11 +9,12 @@ export function Home() {
   const {itemsPerPage,
     filteredBuilds,
     selectedClass,
+    setCurrentPage,
     setSelectedClass,
     selectedType,
     setSelectedType,
-    totalPages,  
-    safeCurrentPage, 
+    totalPages,
+    safeCurrentPage,
     paginatedBuilds} = useHome();
 
   return (

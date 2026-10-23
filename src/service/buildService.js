@@ -10,3 +10,19 @@ export const fetchBuildById = async (id) => {
   
   return await response.json();
 };
+
+export async function createBuild(buildData) {
+  const response = await fetch(ENDPOINTS.builds.create, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(buildData),
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `No se pudo publicar la build (HTTP ${response.status}).`
+    );
+  }
+}

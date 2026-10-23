@@ -22,12 +22,10 @@ export const JOB_CLASSES = [
 ];
 
 export const BUILD_TYPES = [
-  { value: 'pve', label: 'PvE (MVP)' },
-  { value: 'pvp', label: 'PvP (Player vs Player)' },
-  { value: 'woe', label: 'Woe (War of Emperium)' },
+  { value: 'PVE', label: 'PvE (MVP)' },
+  { value: 'PVP', label: 'PvP (Player vs Player)' },
+  { value: 'WOE', label: 'Woe (War of Emperium)' },
 ];
-
-export const IMAGE_UPLOAD_ENDPOINT = 'http://localhost:8080/api/v1/images';
 
 export const SANITIZE_BUILD_CONTENT_OPTIONS = {
   ALLOWED_TAGS: [

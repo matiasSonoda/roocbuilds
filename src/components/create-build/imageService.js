@@ -1,10 +1,10 @@
-import { IMAGE_UPLOAD_ENDPOINT } from './buildFormConstants';
+import { ENDPOINTS } from "../../config/apiConfig";
 
 export async function uploadBuildImage(file) {
   const formData = new FormData();
   formData.append('file', file);
 
-  const response = await fetch(IMAGE_UPLOAD_ENDPOINT, {
+  const response = await fetch(ENDPOINTS.images.saveImage, {
     method: 'POST',
     body: formData,
   });

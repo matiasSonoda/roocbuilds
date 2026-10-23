@@ -35,7 +35,7 @@ export const useHome = () => {
       });
     },[])
 
-    return {itemsPerPage,filteredBuilds,selectedClass,setSelectedClass,selectedType,setSelectedType,totalPages,safeCurrentPage,paginatedBuilds}
+    return {itemsPerPage,filteredBuilds,selectedClass,setCurrentPage,setSelectedClass,selectedType,setSelectedType,totalPages,safeCurrentPage,paginatedBuilds}
 
     
 }
